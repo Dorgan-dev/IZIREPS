@@ -1,32 +1,45 @@
 import './App.css';
 import "./assets/tailwind.css";
 import { Routes, Route } from "react-router-dom";
-import Sidebar from "./layouts/Sidebar";
-import Header from "./layouts/Header";
-import Dashboard from "./pages/Dashboard";
-import Orders from "./pages/Orders";
-import Customers from "./pages/Customers";
-import Analytics from "./pages/Analytics";
-import Marketing from "./pages/Marketing";
-import CRM from "./pages/CRM";
-import Stocks from "./pages/Stocks";
-import SaaS from "./pages/SaaS";
-import Logistics from "./pages/Logistics";
-import AIChat from "./pages/AIChat";
-import Chat from "./pages/Chat";
-import Ticket from "./pages/Ticket";
+import React, { Suspense } from "react";
+import Loading from "./components/Loading";
+
+
+import MainLayout from "./layouts/MainLayout";
+import AuthLayout from "./layouts/AuthLayout";
+
+
+const Dashboard = React.lazy(() => import("./pages/Dashboard"));
+const Orders = React.lazy(() => import("./pages/Orders"));
+const Customers = React.lazy(() => import("./pages/Customers"));
+const Analytics = React.lazy(() => import("./pages/Analytics"));
+const Marketing = React.lazy(() => import("./pages/Marketing"));
+const CRM = React.lazy(() => import("./pages/CRM"));
+const Stocks = React.lazy(() => import("./pages/Stocks"));
+const SaaS = React.lazy(() => import("./pages/SaaS"));
+const Logistics = React.lazy(() => import("./pages/Logistics"));
+const AIChat = React.lazy(() => import("./pages/AIChat"));
+const Chat = React.lazy(() => import("./pages/Chat"));
+const Ticket = React.lazy(() => import("./pages/Ticket"));
+
+const Login = React.lazy(() => import("./pages/auth/Login"));
+const Register = React.lazy(() => import("./pages/auth/Register"));
+const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 
 function App() {
   return (
-    <div className="flex">
-      {/* Sidebar */}
-      <Sidebar />
+   <Suspense fallback={<Loading />}>
+      <Routes>
 
-      {/* Content */}
-      <div className="flex-1 bg-gray-50 min-h-screen">
-        <Header />
-        <Routes>
-          {/* <Route path="*" element={<NotFound />} /> */}
+        {/* AUTH */}
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgot" element={<Forgot />} />
+        </Route>
+
+        {/* MAIN */}
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/customers" element={<Customers />} />
@@ -39,10 +52,11 @@ function App() {
           <Route path="/ai-chat" element={<AIChat />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/ticket" element={<Ticket />} />
-        </Routes>
-      </div>
-    </div>
-  )
+        </Route>
+
+      </Routes>
+    </Suspense>
+  );
 }
 
-export default App
+export default App;
