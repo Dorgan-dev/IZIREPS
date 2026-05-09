@@ -2,12 +2,15 @@ import './App.css';
 import "./assets/tailwind.css";
 import { Routes, Route } from "react-router-dom";
 import React, { Suspense } from "react";
-import Loading from "./components/Loading";
+import Loading from "./components/Loading"
+
+const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"))
+const MainLayout = React.lazy(() => import("./layouts/MainLayout"))
 
 
-import MainLayout from "./layouts/MainLayout";
-import AuthLayout from "./layouts/AuthLayout";
-
+const Login = React.lazy(() => import("./pages/auth/Login"));
+const Register = React.lazy(() => import("./pages/auth/Register"));
+const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Orders = React.lazy(() => import("./pages/Orders"));
@@ -21,10 +24,6 @@ const Logistics = React.lazy(() => import("./pages/Logistics"));
 const AIChat = React.lazy(() => import("./pages/AIChat"));
 const Chat = React.lazy(() => import("./pages/Chat"));
 const Ticket = React.lazy(() => import("./pages/Ticket"));
-
-const Login = React.lazy(() => import("./pages/auth/Login"));
-const Register = React.lazy(() => import("./pages/auth/Register"));
-const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 
 function App() {
   return (
