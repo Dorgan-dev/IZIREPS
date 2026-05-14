@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "customer": "Rafif",
+    "service": "PS5 VIP Room - 3 Jam",
+    "price": "Rp 120.000",
+    "status": "Selesai"
+  },
+  {
+    "id": 2,
+    "customer": "Pedro",
+    "service": "PS4 Regular - 2 Jam",
+    "price": "Rp 50.000",
+    "status": "Proses"
+  },
+  {
+    "id": 3,
+    "customer": "David",
+    "service": "PS5 FIFA Session - 4 Jam",
+    "price": "Rp 150.000",
+    "status": "Pending"
+  },
+  {
+    "id": 4,
+    "customer": "Zikra",
+    "service": "VIP Room + Snack",
+    "price": "Rp 180.000",
+    "status": "Selesai"
+  },
+  {
+    "id": 5,
+    "customer": "Sarvin",
+    "service": "PS4 Multiplayer - 5 Jam",
+    "price": "Rp 130.000",
+    "status": "Proses"
+  },
+  {
+    "id": 6,
+    "customer": "Aldo",
+    "service": "PS5 Mortal Kombat - 2 Jam",
+    "price": "Rp 90.000",
+    "status": "Pending"
+  },
+  {
+    "id": 7,
+    "customer": "Rendi",
+    "service": "PS5 VIP Room - Full Night",
+    "price": "Rp 350.000",
+    "status": "Selesai"
+  },
+  {
+    "id": 8,
+    "customer": "Fikri",
+    "service": "PS4 Regular - 1 Jam",
+    "price": "Rp 25.000",
+    "status": "Proses"
+  }
+]

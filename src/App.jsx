@@ -7,6 +7,10 @@ import Loading from "./components/Loading";
 
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
+import GuestLayout from './layouts/GuestLayout';
+
+import Guest from './pages/Guest';
+
 
 
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
@@ -26,10 +30,19 @@ const Login = React.lazy(() => import("./pages/auth/Login"));
 const Register = React.lazy(() => import("./pages/auth/Register"));
 const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 
+const Landing = React.lazy(() => import("./pages/Landing"));
+const NotFound = React.lazy(() => import("./pages/NotFound"));
+
+
+
 function App() {
   return (
-   <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading />}>
       <Routes>
+        {/* LANDING PAGE */}
+        <Route element={<GuestLayout />}>
+          <Route path="/" element={<Landing />} />
+        </Route>
 
         {/* AUTH */}
         <Route element={<AuthLayout />}>
@@ -40,7 +53,7 @@ function App() {
 
         {/* MAIN */}
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/customers" element={<Customers />} />
           <Route path="/analytics" element={<Analytics />} />
@@ -53,6 +66,9 @@ function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/ticket" element={<Ticket />} />
         </Route>
+
+           {/* NOT FOUND */}
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
     </Suspense>
