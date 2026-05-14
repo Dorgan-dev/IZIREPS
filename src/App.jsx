@@ -2,17 +2,23 @@ import './App.css';
 import "./assets/tailwind.css";
 import { Routes, Route } from "react-router-dom";
 import React, { Suspense } from "react";
+
 import Loading from "./components/Loading";
 
+/* LAYOUTS */
+const MainLayout = React.lazy(() => import("./layouts/MainLayout"));
+const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"));
+const GuestLayout = React.lazy(() => import("./layouts/GuestLayout"));
 
-import MainLayout from "./layouts/MainLayout";
-import AuthLayout from "./layouts/AuthLayout";
-import GuestLayout from './layouts/GuestLayout';
+/* AUTH PAGES */
+const Login = React.lazy(() => import("./pages/auth/Login"));
+const Register = React.lazy(() => import("./pages/auth/Register"));
+const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 
-import Guest from './pages/Guest';
+/* LANDING PAGE */
+const Landing = React.lazy(() => import("./pages/Landing"));
 
-
-
+/* DASHBOARD PAGES */
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Orders = React.lazy(() => import("./pages/Orders"));
 const Customers = React.lazy(() => import("./pages/Customers"));
@@ -26,19 +32,14 @@ const AIChat = React.lazy(() => import("./pages/AIChat"));
 const Chat = React.lazy(() => import("./pages/Chat"));
 const Ticket = React.lazy(() => import("./pages/Ticket"));
 
-const Login = React.lazy(() => import("./pages/auth/Login"));
-const Register = React.lazy(() => import("./pages/auth/Register"));
-const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
-
-const Landing = React.lazy(() => import("./pages/Landing"));
+/* NOT FOUND */
 const NotFound = React.lazy(() => import("./pages/NotFound"));
-
-
 
 function App() {
   return (
     <Suspense fallback={<Loading />}>
       <Routes>
+
         {/* LANDING PAGE */}
         <Route element={<GuestLayout />}>
           <Route path="/" element={<Landing />} />
@@ -51,7 +52,7 @@ function App() {
           <Route path="/forgot" element={<Forgot />} />
         </Route>
 
-        {/* MAIN */}
+        {/* DASHBOARD */}
         <Route element={<MainLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/orders" element={<Orders />} />
@@ -67,7 +68,7 @@ function App() {
           <Route path="/ticket" element={<Ticket />} />
         </Route>
 
-           {/* NOT FOUND */}
+        {/* NOT FOUND */}
         <Route path="*" element={<NotFound />} />
 
       </Routes>

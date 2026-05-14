@@ -17,7 +17,6 @@ import {
 
 export default function Login() {
   const navigate = useNavigate();
-
   const [loading, setLoading] = useState(false);
 
   const [error, setError] = useState("");
@@ -81,6 +80,20 @@ export default function Login() {
       setLoading(false);
     }
   };
+
+  const errorInfo = error ? (
+    <div className="bg-red-200 mb-5 p-5 text-sm font-light text-gray-600 rounded flex items-center">
+      <BsFillExclamationDiamondFill className="text-red-600 me-2 text-lg" />
+      {error}
+    </div>
+  ) : null
+
+  const loadingInfo = loading ? (
+    <div className="bg-gray-200 mb-5 p-5 text-sm rounded flex items-center">
+      <ImSpinner2 className="me-2 animate-spin" />
+      Mohon Tunggu...
+    </div>
+  ) : null
 
   return (
     <div>
