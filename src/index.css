@@ -112,3 +112,20 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+/* Menghilangkan background putih akibat autofill browser di Dark Mode */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  /* Memaksa background bawaan browser agar transparan */
+  -webkit-background-clip: text;
+  
+  /* Menjaga agar teks di dalam input tetap berwarna putih */
+  -webkit-text-fill-color: #ffffff !important;
+  
+  /* Trik mengakali background color dengan transisi super lama agar tidak berubah putih */
+  transition: background-color 9999999s ease-in-out 0s;
+  
+  /* Memastikan tidak ada bayangan putih/terang di dalam kotak input */
+  box-shadow: inset 0 0 0px 1000px transparent !important;
+}

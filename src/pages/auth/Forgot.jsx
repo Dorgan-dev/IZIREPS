@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  FiMail,
-  FiArrowLeft,
-  FiSend,
-} from "react-icons/fi";
+import { FiMail, FiArrowLeft, FiSend } from "react-icons/fi";
 
 export default function Forgot() {
   const [email, setEmail] = useState("");
@@ -12,7 +8,6 @@ export default function Forgot() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!email) return;
 
     setSuccess(true);
@@ -20,67 +15,65 @@ export default function Forgot() {
 
   return (
     <div className="w-full">
-
-      {/* Title */}
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-white">
+      {/* ================= HEADER KONTEN ================= */}
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold tracking-tight text-white">
           Forgot Password 🔐
         </h2>
-
-        <p className="text-slate-400 mt-3 leading-relaxed">
-          Masukkan email akun kamu dan kami akan mengirimkan
-          link reset password.
+        <p className="text-slate-400 mt-2 text-sm leading-relaxed">
+          Masukkan email akun Anda dan kami akan mengirimkan instruksi beserta tautan untuk mengatur ulang kata sandi.
         </p>
       </div>
 
-      {/* Success Message */}
+      {/* ================= NOTIFIKASI SUKSES ================= */}
       {success && (
-        <div className="mb-6 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-5 py-4 rounded-2xl text-sm">
-          Link reset password berhasil dikirim ke email kamu.
+        <div className="mb-6 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 p-4 rounded-xl text-sm animate-fade-in">
+          Tautan pemulihan kata sandi berhasil dikirim! Silakan periksa kotak masuk atau folder spam email Anda.
         </div>
       )}
 
-      {/* Form */}
+      {/* ================= FORM UTAMA ================= */}
       <form onSubmit={handleSubmit} className="space-y-6">
-
-        {/* Email */}
+        
+        {/* INPUT EMAIL */}
         <div>
-          <label className="text-sm text-slate-300 mb-2 block">
+          <label className="block text-sm font-medium text-slate-300 mb-2">
             Email Address
           </label>
-
-          <div className="relative">
-            <FiMail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg" />
-
+          <div className="relative flex items-center">
+            {/* Posisi Ikon yang Presisi */}
+            <span className="absolute left-4 text-slate-500">
+              <FiMail className="text-lg" />
+            </span>
             <input
               type="email"
-              placeholder="you@example.com"
+              placeholder="nama@perusahaan.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full bg-white/5 border border-white/10 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-white placeholder:text-slate-500 rounded-2xl py-4 pl-12 pr-4 transition"
+              className="w-full bg-slate-950 border border-slate-800 rounded-xl pl-12 pr-4 py-3.5 text-sm text-white outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition placeholder:text-slate-600"
             />
           </div>
         </div>
 
-        {/* Button */}
+        {/* TOMBOL SUBMIT */}
         <button
           type="submit"
-          className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:opacity-90 transition text-white py-4 rounded-2xl font-semibold shadow-lg"
+          className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 transition text-white py-3.5 rounded-xl font-medium text-sm shadow-lg shadow-blue-600/10"
         >
-          <FiSend />
-          Send Reset Link
+          <FiSend className="text-base" />
+          Kirim Link Reset
         </button>
       </form>
 
-      {/* Back Login */}
-      <div className="text-center mt-8">
+      {/* ================= NAVIGASI KEMBALI ================= */}
+      <div className="text-center mt-8 pt-2">
         <Link
           to="/login"
-          className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition font-medium"
+          className="inline-flex items-center gap-2 text-sm font-medium text-blue-500 hover:text-blue-400 transition"
         >
-          <FiArrowLeft />
-          Back to Login
+          <FiArrowLeft className="text-base" />
+          Kembali ke Halaman Login
         </Link>
       </div>
     </div>
