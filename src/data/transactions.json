@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "customer": "Rafif",
+    "service": "Booking PS5 - VIP Room",
+    "duration": "3 Jam",
+    "price": "Rp 75.000",
+    "status": "Selesai"
+  },
+  {
+    "id": 2,
+    "customer": "Pedro",
+    "service": "Booking PS4 - Regular",
+    "duration": "2 Jam",
+    "price": "Rp 35.000",
+    "status": "Proses"
+  },
+  {
+    "id": 3,
+    "customer": "David",
+    "service": "Booking PS5 - Tournament Room",
+    "duration": "5 Jam",
+    "price": "Rp 120.000",
+    "status": "Pending"
+  },
+  {
+    "id": 4,
+    "customer": "Zikra",
+    "service": "Booking PS4 - VIP Room",
+    "duration": "4 Jam",
+    "price": "Rp 90.000",
+    "status": "Selesai"
+  },
+  {
+    "id": 5,
+    "customer": "Sarvin",
+    "service": "Booking PS5 - Regular",
+    "duration": "1 Jam",
+    "price": "Rp 25.000",
+    "status": "Proses"
+  }
+]

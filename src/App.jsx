@@ -2,11 +2,29 @@ import './App.css';
 import "./assets/tailwind.css";
 import { Routes, Route } from "react-router-dom";
 import React, { Suspense } from "react";
+
 import Loading from "./components/Loading";
 
+<<<<<<< HEAD
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
 
+=======
+/* LAYOUTS */
+const MainLayout = React.lazy(() => import("./layouts/MainLayout"));
+const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"));
+const GuestLayout = React.lazy(() => import("./layouts/GuestLayout"));
+
+/* AUTH PAGES */
+const Login = React.lazy(() => import("./pages/auth/Login"));
+const Register = React.lazy(() => import("./pages/auth/Register"));
+const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
+
+/* LANDING PAGE */
+const Landing = React.lazy(() => import("./pages/Landing"));
+
+/* DASHBOARD PAGES */
+>>>>>>> d8c67d6a148284571055f701e9e93cc5c5ec7617
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Orders = React.lazy(() => import("./pages/Orders"));
 const Customers = React.lazy(() => import("./pages/Customers"));
@@ -22,14 +40,18 @@ const Chat = React.lazy(() => import("./pages/Chat"));
 const Ticket = React.lazy(() => import("./pages/Ticket"));
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
 
-const Login = React.lazy(() => import("./pages/auth/Login"));
-const Register = React.lazy(() => import("./pages/auth/Register"));
-const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
+/* NOT FOUND */
+const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 function App() {
   return (
     <Suspense fallback={<Loading />}>
       <Routes>
+
+        {/* LANDING PAGE */}
+        <Route element={<GuestLayout />}>
+          <Route path="/" element={<Landing />} />
+        </Route>
 
         {/* AUTH */}
         <Route element={<AuthLayout />}>
@@ -38,9 +60,9 @@ function App() {
           <Route path="/forgot" element={<Forgot />} />
         </Route>
 
-        {/* MAIN */}
+        {/* DASHBOARD */}
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/customers" element={<Customers />} />
           <Route path="/products" element={<Products />} />
@@ -55,6 +77,9 @@ function App() {
           <Route path="/ticket" element={<Ticket />} />
           <Route path="/products/:id" element={<ProductDetail />} /> 
         </Route>
+
+        {/* NOT FOUND */}
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
     </Suspense>
