@@ -12,14 +12,15 @@ export default function Sidebar() {
       isActive
         ? "bg-blue-100 text-blue-600 font-semibold"
         : "text-gray-600 hover:bg-gray-100"
-    }`
+    }`;
 
   return (
     <aside className="w-64 min-h-screen bg-white border-r p-5 flex flex-col">
 
       {/* Logo */}
       <div className="p-6 text-xl font-poppins-extrabold font-bold flex items-center gap-2">
-        <CgGames /><span className="text-biru">IZIREPS</span>
+        <CgGames />
+        <span className="text-biru">IZIREPS</span>
       </div>
 
       {/* MAIN MENU */}
@@ -27,15 +28,23 @@ export default function Sidebar() {
       <nav className="space-y-2">
 
         <NavLink to="/" end className={menuClass}>
-          <MdDashboard className="mr-3 text-lg" /> Dashboard
+          <MdDashboard className="mr-3 text-lg" />
+          Dashboard
         </NavLink>
 
         <NavLink to="/orders" className={menuClass}>
-          <AiOutlineOrderedList className="mr-3 text-lg" /> Orders
+          <AiOutlineOrderedList className="mr-3 text-lg" />
+          Orders
         </NavLink>
 
         <NavLink to="/customers" className={menuClass}>
-          <BsFillPeopleFill className="mr-3 text-lg" /> Customers
+          <BsFillPeopleFill className="mr-3 text-lg" />
+          Customers
+        </NavLink>
+
+        <NavLink to="/products" className={menuClass}>
+          <CgGames className="mr-3 text-lg" />
+          Rental PS
         </NavLink>
 
       </nav>
@@ -45,27 +54,33 @@ export default function Sidebar() {
       <nav className="space-y-2">
 
         <NavLink to="/analytics" className={menuClass}>
-          <FaChartBar className="mr-3" /> Analytics
+          <FaChartBar className="mr-3" />
+          Analytics
         </NavLink>
 
         <NavLink to="/marketing" className={menuClass}>
-          <FaUsers className="mr-3" /> Marketing
+          <FaUsers className="mr-3" />
+          Marketing
         </NavLink>
 
         <NavLink to="/crm" className={menuClass}>
-          <FaUsers className="mr-3" /> CRM
+          <FaUsers className="mr-3" />
+          CRM
         </NavLink>
 
         <NavLink to="/stocks" className={menuClass}>
-          <FaBox className="mr-3" /> Stocks
+          <FaBox className="mr-3" />
+          Stocks
         </NavLink>
 
         <NavLink to="/saas" className={menuClass}>
-          <FaBox className="mr-3" /> SaaS
+          <FaBox className="mr-3" />
+          SaaS
         </NavLink>
 
         <NavLink to="/logistics" className={menuClass}>
-          <FaBox className="mr-3" /> Logistics
+          <FaBox className="mr-3" />
+          Logistics
         </NavLink>
 
       </nav>
@@ -75,7 +90,8 @@ export default function Sidebar() {
       <nav className="space-y-2">
 
         <NavLink to="/ai-chat" className={menuClass}>
-          <FaRobot className="mr-3" /> AI Chat
+          <FaRobot className="mr-3" />
+          AI Chat
         </NavLink>
 
       </nav>
@@ -95,5 +111,5 @@ export default function Sidebar() {
       </nav>
 
     </aside>
-  )
+  );
 }

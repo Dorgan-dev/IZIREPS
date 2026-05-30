@@ -1,0 +1,142 @@
+[
+  {
+    "title": "PS 5 Reguler 1 Jam",
+    "category": "PlayStation",
+    "price": 10000,
+    "image": "https://via.placeholder.com/100x100?text=PS5+1+Jam",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "PS 5 Reguler 2 Jam",
+    "category": "PlayStation",
+    "price": 18000,
+    "image": "https://via.placeholder.com/100x100?text=PS5+2+Jam",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "PS 5 VIP 1 Jam",
+    "category": "PlayStation",
+    "price": 15000,
+    "image": "https://via.placeholder.com/100x100?text=PS5+VIP",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "PS 4 Reguler 1 Jam",
+    "category": "PlayStation",
+    "price": 8000,
+    "image": "https://via.placeholder.com/100x100?text=PS4+1+Jam",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "PS 4 Reguler 2 Jam",
+    "category": "PlayStation",
+    "price": 15000,
+    "image": "https://via.placeholder.com/100x100?text=PS4+2+Jam",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "PS 4 VIP 1 Jam",
+    "category": "PlayStation",
+    "price": 12000,
+    "image": "https://via.placeholder.com/100x100?text=PS4+VIP",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Paket Main 3 Jam",
+    "category": "Paket",
+    "price": 25000,
+    "image": "https://via.placeholder.com/100x100?text=Paket+3+Jam",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Paket Main 5 Jam",
+    "category": "Paket",
+    "price": 40000,
+    "image": "https://via.placeholder.com/100x100?text=Paket+5+Jam",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Paket Main Seharian",
+    "category": "Paket",
+    "price": 75000,
+    "image": "https://via.placeholder.com/100x100?text=Full+Day",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Rental Stick Tambahan",
+    "category": "Aksesoris",
+    "price": 5000,
+    "image": "https://via.placeholder.com/100x100?text=Stick",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Rental Headset Gaming",
+    "category": "Aksesoris",
+    "price": 7000,
+    "image": "https://via.placeholder.com/100x100?text=Headset",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Rental Racing Wheel",
+    "category": "Aksesoris",
+    "price": 15000,
+    "image": "https://via.placeholder.com/100x100?text=Racing+Wheel",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Turnamen FIFA FC 26",
+    "category": "Event",
+    "price": 25000,
+    "image": "https://via.placeholder.com/100x100?text=FIFA",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Turnamen Tekken 8",
+    "category": "Event",
+    "price": 30000,
+    "image": "https://via.placeholder.com/100x100?text=Tekken+8",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Turnamen eFootball",
+    "category": "Event",
+    "price": 20000,
+    "image": "https://via.placeholder.com/100x100?text=eFootball",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Top Up Saldo Member",
+    "category": "Layanan",
+    "price": 50000,
+    "image": "https://via.placeholder.com/100x100?text=Member",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Pembuatan Kartu Member",
+    "category": "Layanan",
+    "price": 10000,
+    "image": "https://via.placeholder.com/100x100?text=Member+Card",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Rental Ruangan Private",
+    "category": "VIP",
+    "price": 50000,
+    "image": "https://via.placeholder.com/100x100?text=Private+Room",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Paket Nongkrong PS + Snack",
+    "category": "Paket",
+    "price": 35000,
+    "image": "https://via.placeholder.com/100x100?text=Snack+Package",
+    "brand": "Rafif Game Center"
+  },
+  {
+    "title": "Paket Mabar 4 Orang",
+    "category": "Paket",
+    "price": 60000,
+    "image": "https://via.placeholder.com/100x100?text=Mabar",
+    "brand": "Rafif Game Center"
+  }
+]
